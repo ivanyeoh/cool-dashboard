@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch",
+    "test": "jest",
     "mockapi": "mockoon-cli start --data ./mockoon.json",
     "mockapi:stop": "mockoon-cli stop all"
   },
