@@ -1,0 +1,196 @@
+{
+    "source": "mockoon:1.17.0",
+    "data": [
+        {
+            "type": "environment",
+            "item": {
+                "uuid": "50165450-eeba-4638-94be-017b54c26e72",
+                "lastMigration": 19,
+                "name": "Checkbox Dashboard API",
+                "endpointPrefix": "api/v1/",
+                "latency": 0,
+                "port": 3030,
+                "hostname": "127.0.0.1",
+                "routes": [
+                    {
+                        "uuid": "e64c60bc-f762-4523-a7b9-99f90da6c2de",
+                        "documentation": "",
+                        "method": "get",
+                        "endpoint": "dashboard-widgets",
+                        "responses": [
+                            {
+                                "uuid": "5fbe5f0a-2ec4-4458-9be4-d51bab093cb3",
+                                "body": "{\n  \"data\": {\n    \"widgets\": [\n      {\n        \"id\": 1,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 2,\n        \"x\": 0,\n        \"y\": 0\n      },\n      {\n        \"id\": 2,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 1,\n        \"x\": 2,\n        \"y\": 0\n      },\n      {\n        \"id\": 3,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 1,\n        \"h\": 1,\n        \"x\": 4,\n        \"y\": 0\n      },\n      {\n        \"id\": 4,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 1,\n        \"h\": 2,\n        \"x\": 5,\n        \"y\": 0\n      },\n      {\n        \"id\": 5,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 3,\n        \"h\": 1,\n        \"x\": 2,\n        \"y\": 1\n      },\n      {\n        \"id\": 6,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 1,\n        \"h\": 1,\n        \"x\": 0,\n        \"y\": 2\n      }\n    ]\n  }\n}\n",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "40b7f245-2926-47fd-8068-af531c3b3b67",
+                        "documentation": "{  \"data\": { \"component\": \"NiceChart\", \"dataUrl\": \"/api/v1/income-performance-by-role\", \"x\": 0, \"y\": 0, \"w\": 2, \"h\": 2  } }",
+                        "method": "post",
+                        "endpoint": "dashboard-widgets",
+                        "responses": [
+                            {
+                                "uuid": "95e7a769-4660-4038-bf81-288ff21c370d",
+                                "body": "{\n  \"data\": {\n    \"id\": 3,\n    \"component\": \"NiceChart\",\n    \"dataUrl\": \"/api/v1/income-performance-by-role\",\n    \"w\": 2,\n    \"h\": 2,\n    \"x\": 0,\n    \"y\": 0\n  }\n}",
+                                "latency": 0,
+                                "statusCode": 201,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            },
+                            {
+                                "uuid": "b4d432ff-ba71-4c89-9b15-b38db5d3092e",
+                                "body": "{\n  \"error\": {\n    \"name\": \"ERROR_1\",\n    \"message\": \"Invalid component\"\n  }\n}",
+                                "latency": 0,
+                                "statusCode": 400,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [
+                                    {
+                                        "target": "body",
+                                        "modifier": "component",
+                                        "value": "FailChart",
+                                        "operator": "equals"
+                                    }
+                                ],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "4059ad04-c2e4-42c2-99b8-1c195e7db5b8",
+                        "documentation": "{  \"data\": {   \"w\": 1,  \"h\": 1  } }",
+                        "method": "put",
+                        "endpoint": "dashboard-widgets/:id",
+                        "responses": [
+                            {
+                                "uuid": "a7b58377-3833-47e1-8e7a-7392f9452163",
+                                "body": "{\n  \"data\": {\n    \"id\": 1,\n    \"component\": \"NiceChart\",\n    \"dataUrl\": \"/api/v1/income-performance-by-role\",\n    \"w\": 2,\n    \"h\": 2,\n    \"x\": 0,\n    \"y\": 0\n  }\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "Default response",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "e459a790-5667-4805-b816-e8d8721aa793",
+                        "documentation": "{ data: { swapWithId: 1 } }",
+                        "method": "put",
+                        "endpoint": "dashboard-widgets/:id/swap",
+                        "responses": [
+                            {
+                                "uuid": "ef3393bc-ef75-4a0e-a8fb-47bcb496f100",
+                                "body": "{\n  \"data\": {\n    \"widgets\": [\n      {\n        \"id\": 1,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 2,\n        \"x\": 0,\n        \"y\": 0\n      },\n      {\n        \"id\": 2,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 2,\n        \"x\": 1,\n        \"y\": 0\n      }\n    ]\n  }\n}",
+                                "latency": 0,
+                                "statusCode": 200,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    },
+                    {
+                        "uuid": "2b000960-ca00-42cc-b065-6e3932fa1afc",
+                        "documentation": "",
+                        "method": "delete",
+                        "endpoint": "dashboard-widgets/:id",
+                        "responses": [
+                            {
+                                "uuid": "e1ecfb0b-631a-44c5-af66-ca4b859c2655",
+                                "body": "{\n  \"data\": {\n    \"widgets\": [\n      {\n        \"id\": 1,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 2,\n        \"x\": 0,\n        \"y\": 0\n      },\n      {\n        \"id\": 2,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 2,\n        \"h\": 1,\n        \"x\": 2,\n        \"y\": 0\n      },\n      {\n        \"id\": 3,\n        \"component\": \"NiceChart\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 1,\n        \"h\": 1,\n        \"x\": 4,\n        \"y\": 0\n      },\n      {\n        \"id\": 4,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 1,\n        \"h\": 2,\n        \"x\": 5,\n        \"y\": 0\n      },\n      {\n        \"id\": 5,\n        \"component\": \"DataTable\",\n        \"dataUrl\": \"/api/v1/income-performance-by-role\",\n        \"w\": 3,\n        \"h\": 1,\n        \"x\": 2,\n        \"y\": 1\n      }\n    ]\n  }\n}\n",
+                                "latency": 0,
+                                "statusCode": 202,
+                                "label": "",
+                                "headers": [],
+                                "filePath": "",
+                                "sendFileAsBody": false,
+                                "rules": [],
+                                "rulesOperator": "OR",
+                                "disableTemplating": false,
+                                "fallbackTo404": false
+                            }
+                        ],
+                        "enabled": true,
+                        "randomResponse": false,
+                        "sequentialResponse": false
+                    }
+                ],
+                "proxyMode": false,
+                "proxyHost": "",
+                "proxyRemovePrefix": false,
+                "tlsOptions": {
+                    "enabled": false,
+                    "type": "CERT",
+                    "pfxPath": "",
+                    "certPath": "",
+                    "keyPath": "",
+                    "caPath": "",
+                    "passphrase": ""
+                },
+                "cors": true,
+                "headers": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "proxyReqHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ],
+                "proxyResHeaders": [
+                    {
+                        "key": "",
+                        "value": ""
+                    }
+                ]
+            }
+        }
+    ]
+}
