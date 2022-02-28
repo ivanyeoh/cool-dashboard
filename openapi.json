@@ -1,1 +1,41 @@
-{"openapi":"3.0.0","info":{"title":"Checkbox Dashboard API","version":"1.0.0"},"servers":[{"url":"http://localhost:3030/api/v1/"}],"paths":{"/dashboard-widgets":{"get":{"description":"","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}}},"post":{"description":"{  \"data\": { \"component\": \"NiceChart\", \"dataUrl\": \"/api/v1/income-performance-by-role\", \"x\": 0, \"y\": 0, \"w\": 2, \"h\": 2  } }","responses":{"201":{"description":"","content":{"application/json":{}},"headers":{}},"400":{"description":"","content":{"application/json":{}},"headers":{}}}}},"/dashboard-widgets/{id}":{"put":{"description":"{  \"data\": {   \"w\": 1,  \"h\": 1  } }","responses":{"200":{"description":"Default response","content":{"application/json":{}},"headers":{}}},"parameters":[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]},"delete":{"description":"","responses":{"202":{"description":"","content":{"application/json":{}},"headers":{}}},"parameters":[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}},"/dashboard-widgets/{id}/swap":{"put":{"description":"{ data: { swapWithId: 1 } }","responses":{"200":{"description":"","content":{"application/json":{}},"headers":{}}},"parameters":[{"name":"id","in":"path","schema":{"type":"string"},"required":true}]}}}}
+{
+  "openapi": "3.0.0",
+  "info": { "title": "Checkbox Dashboard API", "version": "1.0.0" },
+  "servers": [{ "url": "http://localhost:3030/api/v1/" }],
+  "paths": {
+    "/dashboard-widgets": {
+      "get": {
+        "description": "",
+        "responses": { "200": { "description": "", "content": { "application/json": {} }, "headers": {} } }
+      },
+      "post": {
+        "description": "{  \"data\": { \"component\": \"NiceChart\", \"dataUrl\": \"/api/v1/income-performance-by-role\", \"x\": 0, \"y\": 0, \"w\": 2, \"h\": 2  } }",
+        "responses": {
+          "201": { "description": "", "content": { "application/json": {} }, "headers": {} },
+          "400": { "description": "", "content": { "application/json": {} }, "headers": {} }
+        }
+      }
+    },
+    "/dashboard-widgets/{id}": {
+      "put": {
+        "description": "{  \"data\": {   \"w\": 1,  \"h\": 1  } }",
+        "responses": {
+          "200": { "description": "Default response", "content": { "application/json": {} }, "headers": {} }
+        },
+        "parameters": [{ "name": "id", "in": "path", "schema": { "type": "string" }, "required": true }]
+      },
+      "delete": {
+        "description": "",
+        "responses": { "202": { "description": "", "content": { "application/json": {} }, "headers": {} } },
+        "parameters": [{ "name": "id", "in": "path", "schema": { "type": "string" }, "required": true }]
+      }
+    },
+    "/dashboard-widgets/{id}/swap": {
+      "put": {
+        "description": "{ data: { swapWithId: 1 } }",
+        "responses": { "200": { "description": "", "content": { "application/json": {} }, "headers": {} } },
+        "parameters": [{ "name": "id", "in": "path", "schema": { "type": "string" }, "required": true }]
+      }
+    }
+  }
+}
