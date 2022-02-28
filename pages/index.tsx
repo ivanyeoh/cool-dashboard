@@ -9,7 +9,7 @@ const Admin: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dashboard Challenge | Readonly</title>
+        <title>Dashboard | Readonly</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>

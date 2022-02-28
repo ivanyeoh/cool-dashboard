@@ -10,7 +10,7 @@ const Admin: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>Dashboard Challenge | Admin</title>
+        <title>Dashboard | Admin</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
